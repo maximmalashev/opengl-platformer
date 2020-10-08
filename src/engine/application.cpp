@@ -2,7 +2,11 @@
 
 #include <iostream>
 
-void Application::SayHello()
-{
-	std::cout << "Hello World!" << std::endl;
+namespace engine {
+
+	void Application::SayHello()
+	{
+		std::cout << "Hello World!" << std::endl;
+	}
+
 }

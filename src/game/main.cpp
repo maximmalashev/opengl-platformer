@@ -4,7 +4,7 @@
 
 int main()
 {
-	Application::SayHello();
+	engine::Application::SayHello();
 
 	return 0;
 }

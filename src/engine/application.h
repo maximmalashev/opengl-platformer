@@ -1,5 +1,9 @@
-class Application
-{
-public:
-	static void SayHello();
-};
+namespace engine {
+
+	class Application
+	{
+	public:
+		static void SayHello();
+	};
+
+}
