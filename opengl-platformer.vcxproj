@@ -6,13 +6,6 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\engine\application.cpp" />
-    <ClCompile Include="src\game\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\engine\application.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{13A16BA8-7FB7-693E-C82E-F55F34843AC6}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
@@ -53,10 +46,19 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>glfw3.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glew32s.lib;opengl32.lib;gdi32.lib;MSVCRT.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>dependencies\glfw\lib;dependencies\glew\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\engine\application.h" />
+    <ClInclude Include="src\engine\window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\engine\application.cpp" />
+    <ClCompile Include="src\engine\window.cpp" />
+    <ClCompile Include="src\game\main.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

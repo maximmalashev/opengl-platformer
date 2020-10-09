@@ -9,9 +9,10 @@ project	"opengl-platformer"
 
 	files 
 	{
-		"%{prj.name}/src/engine/**.cpp",
-		"%{prj.name}/src/game/**.h"
-
+		"src/engine/**.cpp",
+		"src/game/**.cpp",
+		"src/engine/**.h",
+		"src/game/**.h"
 	}
 
 	filter "system:windows"
@@ -40,5 +41,7 @@ project	"opengl-platformer"
 		{
 			"glfw3",
 			"glew32s",
-			"opengl32"
+			"opengl32",
+			"gdi32.lib",
+			"MSVCRT.lib"
 		}

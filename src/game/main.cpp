@@ -4,7 +4,8 @@
 
 int main()
 {
-	engine::Application::SayHello();
+	engine::Application::Initialize(1080, 720, "OpenGL Window");
+	engine::Application::Start();
 
 	return 0;
 }
