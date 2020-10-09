@@ -11,9 +11,9 @@ namespace engine {
 
 		switch (type) 
 		{
-		case MessageType::MESSAGE:
+		case MessageType::INFO:
 			SetConsoleTextAttribute(hConsole, 7);
-			std::cout << "[MESSAGE]: " << message << std::endl;
+			std::cout << "[INFO]: " << message << std::endl;
 			break;
 		case MessageType::WARNING:
 			SetConsoleTextAttribute(hConsole, 14);

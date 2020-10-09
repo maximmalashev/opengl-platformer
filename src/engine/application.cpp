@@ -18,7 +18,7 @@ namespace engine {
 			std::exit(-1);
 		}
 
-		Logger::Log(Logger::MessageType::MESSAGE, "This is the usual text color!");
+		Logger::Log(Logger::MessageType::INFO, "This is the usual text color!");
 		Logger::Log(Logger::MessageType::WARNING, "This text should be yellow!");
 		Logger::Log(Logger::MessageType::FATAL, "This text should be red!");
 		while (!m_currentWindow->GetShouldClose())
