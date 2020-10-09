@@ -12,19 +12,21 @@
     <ClInclude Include="src\engine\application.h">
       <Filter>engine</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\window.h">
+    <ClInclude Include="src\engine\rendering\window.h">
       <Filter>engine</Filter>
     </ClInclude>
+    <ClInclude Include="src\engine\logging\logger.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\application.cpp">
       <Filter>engine</Filter>
     </ClCompile>
-    <ClCompile Include="src\engine\window.cpp">
-      <Filter>engine</Filter>
-    </ClCompile>
     <ClCompile Include="src\game\main.cpp">
       <Filter>game</Filter>
     </ClCompile>
+    <ClCompile Include="src\engine\rendering\window.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\logging\logger.cpp" />
   </ItemGroup>
 </Project>

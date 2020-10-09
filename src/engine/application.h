@@ -1,6 +1,6 @@
 #pragma once
 
-#include "window.h"
+#include "rendering/window.h"
 
 #include <string>
 
@@ -11,9 +11,11 @@ namespace engine {
 	public:
 		static void Initialize(uint32_t windowWidth, uint32_t windowHeight, const std::string& title);
 		static void Start();
+
+		static inline Window* GetCurrentWindow() { return m_currentWindow; }
 	
 	private:
-		static Window* currentWindow;
+		static Window* m_currentWindow;
 	};
 
 }

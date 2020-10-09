@@ -52,11 +52,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\application.h" />
-    <ClInclude Include="src\engine\window.h" />
+    <ClInclude Include="src\engine\logging\logger.h" />
+    <ClInclude Include="src\engine\rendering\window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\application.cpp" />
-    <ClCompile Include="src\engine\window.cpp" />
+    <ClCompile Include="src\engine\logging\logger.cpp" />
+    <ClCompile Include="src\engine\rendering\window.cpp" />
     <ClCompile Include="src\game\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

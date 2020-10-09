@@ -48,6 +48,7 @@ namespace engine {
 	void Window::SetDimensions(uint32_t newWidth, uint32_t newHeight)
 	{
 		glfwSetWindowSize(m_windowInstance, newWidth, newHeight);
+		UpdateViewport();
 	}
 
 	void Window::SetTitle(const std::string& newTitle)
