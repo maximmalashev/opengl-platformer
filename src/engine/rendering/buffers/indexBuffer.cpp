@@ -2,27 +2,31 @@
 
 #include "IndexBuffer.h"
 
-IndexBuffer::IndexBuffer(unsigned int* data, unsigned int count) 
-	: data(data), count(count), id(0)
-{
-	glGenBuffers(1, &id);
+namespace engine {
 
-	bind();
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), data, GL_STATIC_DRAW);
-	unbind();
-}
+	IndexBuffer::IndexBuffer(unsigned int* data, unsigned int count)
+		: data(data), count(count), id(0)
+	{
+		glGenBuffers(1, &id);
 
-void IndexBuffer::bind()
-{
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
-}
+		bind();
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), data, GL_STATIC_DRAW);
+		unbind();
+	}
 
-void IndexBuffer::unbind()
-{
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-}
+	void IndexBuffer::bind()
+	{
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
+	}
 
-IndexBuffer::~IndexBuffer()
-{
-	glDeleteBuffers(1, &id);
+	void IndexBuffer::unbind()
+	{
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	}
+
+	IndexBuffer::~IndexBuffer()
+	{
+		glDeleteBuffers(1, &id);
+	}
+
 }

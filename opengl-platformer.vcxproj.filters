@@ -26,8 +26,10 @@
     </ClInclude>
     <ClInclude Include="src\engine\rendering\renderer.h" />
     <ClInclude Include="src\engine\utils\color.h" />
-    <ClInclude Include="src\engine\rendering\vbo.h" />
-    <ClInclude Include="src\engine\rendering\ibo.h" />
+    <ClInclude Include="src\engine\rendering\buffers\arrayBuffer.h" />
+    <ClInclude Include="src\engine\rendering\buffers\indexBuffer.h" />
+    <ClInclude Include="src\engine\rendering\buffers\vertexBuffer.h" />
+    <ClInclude Include="src\engine\rendering\shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\application.cpp">
@@ -44,7 +46,9 @@
     </ClCompile>
     <ClCompile Include="src\engine\rendering\renderer.cpp" />
     <ClCompile Include="src\engine\utils\color.cpp" />
-    <ClCompile Include="src\engine\rendering\vbo.cpp" />
-    <ClCompile Include="src\engine\rendering\ibo.cpp" />
+    <ClCompile Include="src\engine\rendering\buffers\arrayBuffer.cpp" />
+    <ClCompile Include="src\engine\rendering\buffers\indexBuffer.cpp" />
+    <ClCompile Include="src\engine\rendering\buffers\vertexBuffer.cpp" />
+    <ClCompile Include="src\engine\rendering\shader.cpp" />
   </ItemGroup>
 </Project>

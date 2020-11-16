@@ -2,27 +2,30 @@
 
 #include "vertexBuffer.h"
 
-VertexBuffer::VertexBuffer(float* data, unsigned int count, std::vector<int> layout) 
-	: data(data), count(count), layout(layout)
-{
-	glGenBuffers(1, &id);
+namespace engine {
 
-	bind();
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * count, data, GL_STATIC_DRAW);
-	unbind();
-}
+	VertexBuffer::VertexBuffer(float* data, unsigned int count, std::vector<int> layout)
+		: data(data), count(count), layout(layout)
+	{
+		glGenBuffers(1, &id);
 
-void VertexBuffer::bind()
-{
-	glBindBuffer(GL_ARRAY_BUFFER, id);
-}
+		bind();
+		glBufferData(GL_ARRAY_BUFFER, sizeof(float) * count, data, GL_STATIC_DRAW);
+		unbind();
+	}
 
-void VertexBuffer::unbind()
-{
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-}
+	void VertexBuffer::bind()
+	{
+		glBindBuffer(GL_ARRAY_BUFFER, id);
+	}
 
-VertexBuffer::~VertexBuffer()
-{
-	glDeleteBuffers(1, &id);
+	void VertexBuffer::unbind()
+	{
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+	}
+
+	VertexBuffer::~VertexBuffer()
+	{
+		glDeleteBuffers(1, &id);
+	}
 }

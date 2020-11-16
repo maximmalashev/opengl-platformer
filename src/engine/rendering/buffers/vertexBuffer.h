@@ -1,24 +1,27 @@
 #pragma once
 #include <vector>
 
-class VertexBuffer
-{
-public:
-	VertexBuffer(float* data, unsigned int count, std::vector<int> layout);
+namespace engine {
 
-	inline std::vector<int> getLayout() const { return layout; }
-	inline unsigned int getId() const { return id; }
+	class VertexBuffer
+	{
+	public:
+		VertexBuffer(float* data, unsigned int count, std::vector<int> layout);
 
-	inline std::vector<int> setLayout(std::vector<int> layout) { this->layout = layout; }
+		inline std::vector<int> getLayout() const { return layout; }
+		inline unsigned int getId() const { return id; }
 
-	void bind();
-	void unbind();
+		inline std::vector<int> setLayout(std::vector<int> layout) { this->layout = layout; }
 
-	~VertexBuffer();
-private:
-	unsigned int id;
-	float* data;
-	unsigned int count;
+		void bind();
+		void unbind();
 
-	std::vector<int> layout;
-};
+		~VertexBuffer();
+	private:
+		unsigned int id;
+		float* data;
+		unsigned int count;
+
+		std::vector<int> layout;
+	};
+}

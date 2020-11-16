@@ -1,20 +1,23 @@
 #pragma once
 
-class IndexBuffer
-{
-public:
-	IndexBuffer(unsigned int* data, unsigned int count);
+namespace engine {
 
-	inline unsigned int getCount() const { return count; }
-	inline unsigned int getId() const { return id; }
+	class IndexBuffer
+	{
+	public:
+		IndexBuffer(unsigned int* data, unsigned int count);
 
-	void bind();
-	void unbind();
+		inline unsigned int getCount() const { return count; }
+		inline unsigned int getId() const { return id; }
 
-	~IndexBuffer();
-private:
-	unsigned int id;
-	unsigned int count;
+		void bind();
+		void unbind();
 
-	unsigned int* data;
-};
+		~IndexBuffer();
+	private:
+		unsigned int id;
+		unsigned int count;
+
+		unsigned int* data;
+	};
+}

@@ -2,19 +2,23 @@
 
 #include "vertexBuffer.h"
 
-class ArrayBuffer 
-{
-public:
-	ArrayBuffer();
+namespace engine {
 
-	void attachVertexBuffer(VertexBuffer& vbo);
+	class ArrayBuffer
+	{
+	public:
+		ArrayBuffer();
 
-	inline unsigned int getId() const { return id; }
+		void attachVertexBuffer(VertexBuffer& vbo);
 
-	void bind();
-	void unbind();
+		inline unsigned int getId() const { return id; }
 
-	~ArrayBuffer();
-private:
-	unsigned int id;
-};
+		void bind();
+		void unbind();
+
+		~ArrayBuffer();
+	private:
+		unsigned int id;
+	};
+
+}
