@@ -28,7 +28,8 @@ project	"opengl-platformer"
 		includedirs
 		{
 			"dependencies/glfw/include",
-			"dependencies/glew/include"
+			"dependencies/glew/include",
+			"dependencies/glm"
 		}
 
 		libdirs

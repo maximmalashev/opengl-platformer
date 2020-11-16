@@ -39,7 +39,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>dependencies\glfw\include;dependencies\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>dependencies\glfw\include;dependencies\glew\include;dependencies\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -53,11 +53,13 @@
   <ItemGroup>
     <ClInclude Include="src\engine\application.h" />
     <ClInclude Include="src\engine\logging\logger.h" />
+    <ClInclude Include="src\engine\rendering\renderer.h" />
     <ClInclude Include="src\engine\rendering\window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\application.cpp" />
     <ClCompile Include="src\engine\logging\logger.cpp" />
+    <ClCompile Include="src\engine\rendering\renderer.cpp" />
     <ClCompile Include="src\engine\rendering\window.cpp" />
     <ClCompile Include="src\game\main.cpp" />
   </ItemGroup>

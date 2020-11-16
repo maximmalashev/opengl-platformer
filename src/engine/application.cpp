@@ -1,5 +1,6 @@
 #include "application.h"
 #include "logging/logger.h"
+#include "rendering/renderer.h"
 
 #include <iostream>
 
@@ -11,6 +12,8 @@ namespace engine {
 	{
 		Logger::Log(Logger::MessageType::INFO, "Initialization...");
 		m_currentWindow = new Window(windowWidth, windowHeight, title);
+
+		Renderer::Initialize();
 	}
 	void Application::Start()
 	{
@@ -22,7 +25,9 @@ namespace engine {
 
 		while (!m_currentWindow->GetShouldClose())
 		{
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			Renderer::Clear();
+
+			Renderer::DrawQuad();
 
 			m_currentWindow->SwapBuffers();
 			m_currentWindow->PollEvents();
