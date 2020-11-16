@@ -25,6 +25,7 @@
       <Filter>engine\rendering</Filter>
     </ClInclude>
     <ClInclude Include="src\engine\rendering\renderer.h" />
+    <ClInclude Include="src\engine\utils\color.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\application.cpp">
@@ -40,5 +41,6 @@
       <Filter>game</Filter>
     </ClCompile>
     <ClCompile Include="src\engine\rendering\renderer.cpp" />
+    <ClCompile Include="src\engine\utils\color.cpp" />
   </ItemGroup>
 </Project>
