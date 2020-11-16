@@ -26,6 +26,8 @@
     </ClInclude>
     <ClInclude Include="src\engine\rendering\renderer.h" />
     <ClInclude Include="src\engine\utils\color.h" />
+    <ClInclude Include="src\engine\rendering\vbo.h" />
+    <ClInclude Include="src\engine\rendering\ibo.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\application.cpp">
@@ -42,5 +44,7 @@
     </ClCompile>
     <ClCompile Include="src\engine\rendering\renderer.cpp" />
     <ClCompile Include="src\engine\utils\color.cpp" />
+    <ClCompile Include="src\engine\rendering\vbo.cpp" />
+    <ClCompile Include="src\engine\rendering\ibo.cpp" />
   </ItemGroup>
 </Project>
